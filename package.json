@@ -6,7 +6,7 @@
   "scripts": {
     "setup": "DEBUG=platziverse:* node setup.js",
     "lint": "standard",
-    "test": "DEBUG=platziverse:* ava tests/ --verbose"
+    "test": "DEBUG=platziverse:* nyc --reporter=lcov ava tests/ --verbose"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,9 @@
   "homepage": "https://github.com/platzi/platziverse#readme",
   "devDependencies": {
     "ava": "^0.25.0",
+    "nyc": "^13.0.1",
+    "proxyquire": "^2.1.0",
+    "sinon": "^6.3.4",
     "standard": "^10.0.3"
   },
   "dependencies": {
